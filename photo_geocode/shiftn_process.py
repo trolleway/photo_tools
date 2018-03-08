@@ -19,11 +19,11 @@ if __name__ == '__main__':
     photo = args.path
     photo_basename = os.path.splitext(photo)[0]
     
-    cmd = '{shiftn_path} {photo} {photo_basename}_ShiftN.jpg'.format(shiftn_path = shiftn_path, photo=photo, photo_basename = photo_basename)
+    cmd = '{shiftn_path} "{photo}" "{photo_basename}_ShiftN.jpg"'.format(shiftn_path = shiftn_path, photo=photo, photo_basename = photo_basename)
     print cmd
     os.system(cmd)
     
-    cmd = 'python {script_path}  {photo_basename}_ShiftN.jpg'.format(photo_basename = photo_basename,script_path = os.path.join(os.path.dirname(os.path.realpath(__file__)),'photo_geocode.py'))
+    cmd = 'python {script_path}  "{photo_basename}_ShiftN.jpg"'.format(photo_basename = photo_basename,script_path = os.path.join(os.path.dirname(os.path.realpath(__file__)),'photo_geocode.py'))
     print cmd
     os.system(cmd)
     
