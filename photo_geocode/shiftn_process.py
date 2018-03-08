@@ -25,7 +25,10 @@ if __name__ == '__main__':
     
     cmd = 'python photo_geocode.py {photo_basename}_ShiftN.jpg'.format(photo_basename = photo_basename)
     print cmd
+    os.system(pause)
     os.system(cmd)
+    
+    
  
  
 
