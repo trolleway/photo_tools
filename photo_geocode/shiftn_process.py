@@ -23,7 +23,7 @@ if __name__ == '__main__':
     print cmd
     os.system(cmd)
     
-    cmd = 'python {script_path} photo_geocode.py {photo_basename}_ShiftN.jpg'.format(photo_basename = photo_basename,script_path = os.path.dirname(os.path.realpath(__file__)))
+    cmd = 'python {script_path}  {photo_basename}_ShiftN.jpg'.format(photo_basename = photo_basename,script_path = os.path.join(os.path.dirname(os.path.realpath(__file__),'photo_geocode.py'))
     print cmd
     os.system(cmd)
     
