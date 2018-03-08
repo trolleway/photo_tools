@@ -19,10 +19,10 @@ if __name__ == '__main__':
     photo = args.path
     photo_basename = os.path.splitext(photo)[0]
     
-    cmd = '{shiftn_path} {photo} {photo_basename}_ShiftN.jpg'.format(shiftn_path = shiftn_path)
+    cmd = '{shiftn_path} {photo} {photo_basename}_ShiftN.jpg'.format(shiftn_path = shiftn_path, photo=photo, photo_basename = photo_basename)
     print cmd
     
-    cmd = 'python photo_geocode.py {photo_basename}_ShiftN.jpg'.format(shiftn_path = shiftn_path)
+    cmd = 'python photo_geocode.py {photo_basename}_ShiftN.jpg'.format(, photo_basename = photo_basename)
     print cmd
     
     quit()
