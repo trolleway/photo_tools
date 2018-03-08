@@ -21,10 +21,11 @@ if __name__ == '__main__':
     
     cmd = '{shiftn_path} {photo} {photo_basename}_ShiftN.jpg'.format(shiftn_path = shiftn_path, photo=photo, photo_basename = photo_basename)
     print cmd
+    os.system(cmd)
     
     cmd = 'python photo_geocode.py {photo_basename}_ShiftN.jpg'.format(photo_basename = photo_basename)
     print cmd
-    
-    quit()
-    #os.system()
-    #os.system()
+    os.system(cmd)
+ 
+ 
+
