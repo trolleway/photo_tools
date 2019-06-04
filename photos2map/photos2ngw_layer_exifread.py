@@ -131,8 +131,8 @@ if __name__ == '__main__':
         json.dump(geojson, outfile)
 
 
-    URL = 'http://trolleway.nextgis.com'
-    AUTH = ('administrator', '16208ii')
+    URL = 'http://example.nextgis.com'
+    AUTH = ('administrator', '')
     GRPNAME = "photos"
 
     import requests
