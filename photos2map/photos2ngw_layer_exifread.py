@@ -107,7 +107,7 @@ if __name__ == '__main__':
         geojsonFeature['crs']['properties'] = dict()
         geojsonFeature['crs']['properties']['name'] = "urn:ogc:def:crs:OGC:1.3:CRS84"
         geojsonFeature['properties'] = dict()
-        geojsonFeature['properties']['filename'] = 'filename'
+        geojsonFeature['properties']['filename'] = filename
         geojsonFeature['properties']['datetime'] = str(_get_if_exist(tags,'Image DateTime'))
         geojsonFeature['geometry']=dict()
         geojsonFeature['geometry']['type'] = 'Point'
@@ -131,8 +131,8 @@ if __name__ == '__main__':
         json.dump(geojson, outfile)
 
 
-    URL = 'http://example.nextgis.com'
-    AUTH = ('administrator', 'admin')
+    URL = 'http://trolleway.nextgis.com'
+    AUTH = ('administrator', '16208ii')
     GRPNAME = "photos"
 
     import requests
