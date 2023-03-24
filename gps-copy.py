@@ -10,4 +10,4 @@ for src_extension in jpg_exts:
     for dst_extension in raw_exts:
         cmd = ['exiftool', '-tagsfromfile', '%d%f'+src_extension, '-gps:all', '-ext', dst_extension, directory]
         proc = subprocess.Popen(cmd)
-        print("the commandline is {}".format(proc.args))
+        print("the commandline is {}".format(proc.args)) 
