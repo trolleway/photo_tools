@@ -11,7 +11,7 @@ RUN groupadd -g $gid trolleway && useradd --home /home/trolleway -u $uid -g $gid
 RUN echo 'trolleway:user' | chpasswd
 
 
-RUN apt-get update && apt-get install --no-install-recommends -y time parallel
+RUN apt-get update && apt-get install --no-install-recommends -y python3-pip time parallel
 #RUN pip3 install exif iptcinfo3 
 
 
@@ -43,8 +43,8 @@ RUN usermod -aG sudo trolleway
 
 
 
-RUN MKDIR /opt/photos
-RUN MKDIR /opt/photo_tools
+#RUN MKDIR /opt/photos
+#RUN MKDIR /opt/photo_tools
 
 COPY . /opt/photo_tools
 WORKDIR /opt/photo_tools
