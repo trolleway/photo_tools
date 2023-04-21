@@ -23,7 +23,8 @@ for src_extension in jpg_exts:
         subprocess.run(cmd)
         #proc = subprocess.Popen(cmd)
         #print("the commandline is {}".format(proc.args)) 
-
+        continue
+        
         for root, dirs, files in os.walk(directory):
             for name in files:
                 
