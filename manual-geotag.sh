@@ -1,0 +1,1 @@
+/opt/exiftool/exiftool -overwrite_original -q -q -q  -P -progress -geotag=gpx.gpx  -geosync="10:50:42@IMGP0509.JPG"  .
