@@ -6,7 +6,7 @@ import os, subprocess
 directory='photos'
 jpg_exts=list()
 jpg_exts.append('.jpg')
-raw_exts=('dng','orf')
+raw_exts=('dng','orf','nef')
 for src_extension in jpg_exts:
     for dst_extension in raw_exts:
         cmd = ['/opt/exiftool/exiftool', '-tagsfromfile', 
