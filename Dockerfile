@@ -33,6 +33,9 @@ RUN set -ex; \
   rm -f $EXIFTOOL_ARCHIVE ;\
   ./exiftool -ver && cd /
 
+#symlink  
+RUN ln -s /opt/exiftool/exiftool /usr/local/bin/exiftool 
+
 RUN apt-get install -y  dialog whiptail 
 
 #add to sudoers
@@ -41,6 +44,8 @@ RUN apt-get install -y sudo
 RUN adduser trolleway sudo
 RUN usermod -aG sudo trolleway
 
+# Clean up 
+RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 
 #RUN MKDIR /opt/photos
