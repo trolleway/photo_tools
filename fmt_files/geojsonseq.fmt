@@ -1,0 +1,21 @@
+#------------------------------------------------------------------------------
+# File:         gpx_wpt.fmt
+#
+# Description:  Example ExifTool print format file to generate GPX waypoints
+#               with pictures
+#
+# Usage:        exiftool -p gpx_wpt.fmt -ee3 FILE [...] > out.gpx
+#
+# Requires:     ExifTool version 10.49 or later
+#
+# Revisions:    2024/12/06 - trolleway created
+#
+# Notes:     1) Input file(s) must contain GPSLatitude and GPSLongitude.
+#            2) The -ee3 option is to extract the full track from video files.
+#            3) The -fileOrder option may be used to control the order of the
+#               generated track points when processing multiple files.
+#            4) Coordinates are written at full resolution.  To change this,
+#               remove the "#" from the GPSLatitude/Longitude tag names below
+#               and use the -c option to set the desired precision.
+#------------------------------------------------------------------------------
+#[BODY]{ "type": "Feature", "properties": { "photo": "$directory/$filename", "filename": "$filename", "directory": "$directory", "altitude": $gpsaltitude#, "direction": null, "rotation": 0, "longitude": "$gpslongitude#", "latitude": "$gpslatitude#", "timestamp": "${gpsdatetime#;DateFmt("%Y-%m-%dT%H:%M:%S%fZ")}" }, "geometry": { "type": "Point", "coordinates": [ $gpslongitude#, $gpslatitude# ] } }
