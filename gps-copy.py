@@ -6,10 +6,10 @@ import os, subprocess
 directory='photos'
 jpg_exts=list()
 jpg_exts.append('.jpg')
-raw_exts=('dng','orf','nef')
+raw_exts=('dng','orf','nef','mpo')
 for src_extension in jpg_exts:
     for dst_extension in raw_exts:
-        print(f'{src_extension} -> {dst_extension}')
+        print(f'copy tags from {src_extension} to {dst_extension}')
         cmd = ['exiftool', '-tagsfromfile', 
                '%d%f'+src_extension, 
                '-overwrite_original', 
