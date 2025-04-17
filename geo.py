@@ -25,9 +25,9 @@ def main():
         '-f',
         '-api', 'missingtagvalue=null',
         '-m',
-        '-r', args.directory,
+        '-r', '"'+args.directory+'"',
         '>',
-        args.output
+        '"'+args.output+'"'
     ]
     # Use subprocess to run the command
     subprocess.run(' '.join(command), shell=True, check=True)
