@@ -25,7 +25,9 @@ subdirs = [f.path for f in os.scandir(BASE_DIR) if f.is_dir()]
 def process_subdir(subdir):
     subdir_name = os.path.basename(subdir)
     output_file = os.path.join(OUTPUT_DIR, f"{subdir_name}.geojsonseq")
-    subprocess.run(["python3", "geo.py", subdir, "--output", output_file], check=True)
+    cmd=["python3", "geo.py", subdir, "--output", output_file]
+    print(cmd)
+    subprocess.run(cmd, check=True)
 
 # Run geo.py in parallel using ThreadPoolExecutor
 with ThreadPoolExecutor() as executor:
